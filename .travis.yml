@@ -15,7 +15,7 @@ deploy:
   provider: script
   script:
   - if grep --quiet '<version>.*SNAPSHOT</version>' pom.xml; then
-      mvn deploy -P snapshot-release --settings deploy/settings.xml
+      mvn deploy -P snapshot-release --settings deploy/settings.xml;
     fi
   skip_cleanup: true
   on:
