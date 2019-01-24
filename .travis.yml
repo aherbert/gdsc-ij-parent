@@ -1,0 +1,22 @@
+language: java
+jdk: openjdk8
+branches:
+  only:
+  - master
+cache:
+  directories:
+  - "$HOME/.m2"
+env:
+  global:
+  - secure: UBcQGB0YgJchzArA5cUWrEuNQRkgiByioMMsrTkGmhdbJ64GPgNt39kZ++nwLhJc0SvyzHdsRi2+qqwraNR/lcJlbsytF2B19e/ZEnpbDB31MHnr0qnPwvu27/Rz6+q5ZCaH9IO/lfLxnKAYVY6Zk5M0b/pAIpkvBCdcKuZfTveeeTEbinynWgjOKwDoW75VxgcOMKVwfOYqbXHmGuZ5D7np6ybeO6tXbgYGGqgF/ACREl7nfephki7xS7CPo6Sp59hsN9CimhEnt0usEviTytAn2rXe/j3xB7oyEgaZHe4qN4NwIsTOci/eF3CgM9GrXgYcuRLgsNBZk1411s07w8fxCxHwUFi/U6utXsVOQmqEmkIwr9C4sBRC+JXpGHU/QNID5afnGSCxamp/uqYFOGAP/kawtBoPMTorhDWy6zgD4ERezZ4+7AU31FYRGEp97p9cM+t8F9AuvAghUDzeWV+L91fU/LRV3EYKhGL9Qy/VBHzgJWxUVc4BfNvxDamVg1nAoQL8QbBajcdelHQZV+bEbJ3THXt7LM4HYzNbkgRrDSbYhaMHstvK6BNqy9tGQqTizDSKDrSwd4rKvfjl9st2plQCdCSfcr2pMULYs312W0KP6g/fbmasHNton4ozvDR/v8OOHg44be/CiEVzPNXfP97KUqzg5KVGoyAAbs0=
+  - secure: VLcoDav07M7J2ygjckZ7z/4RfnjN1zgZxh+DS18us60drNdcZpyeMJUgV/IfogePULi35tmG4ozzmEirpnDPKt6Mj8cRleNwWvGZMwZ6VN71AmMT4MqF1iwrfzf2/V7AHdUte7nZ6s1h+KY/G7pz03vP6ezz7HcwUitGmJZXiWTNAiBojxq4wJEzk13aVp3HR6wLQqwSCF2AhthB3jJa/YELyoW44i/DgOsihapU8USbeSPDc/84Fs3EHZd5U+qzhru6FC8+ySJlPaaUpZaYMtUcySiC66GaRuIUyBAOg9fwcnTIe0UauzjBHjT436FnZVD6Trn7BsUIu4KQH78OzhY9j5MbRXL1pm7AK2mThvpJa8GQstmsVYITnmh8v1fFh5bkd9wEMXfHGvu3H8CrsFXLjujmb/KvfMWMDgiTa4nCDNgKA4BeQYd+cDxR62rFOpYQpxzyQJJPwthLy9fsFIBE1MmHd4AaJRcnB2lghZORV4cU1Gwxha9jXE/B5/rj/WiQKitg5gk4Ell/NUOXomy39F26u/Lg35mqnWFA+TTsDBs73bGoDOV+g9tgOp7tmC5bN1r9OGediWqWg42njbvbCXp3xxoSU4giAxPNpGRlE2C3zry1EDSAuspuo5wuqIofxDqaLRyapq9RGWbJ7iwrQdnpeT+bnoEOGJmimf8=
+install: true
+deploy:
+  provider: script
+  script:
+  - if grep --quiet '<version>.*SNAPSHOT</version>' pom.xml; then
+      mvn deploy -P snapshot-release --settings deploy/settings.xml
+    fi
+  skip_cleanup: true
+  on:
+    branch: master
