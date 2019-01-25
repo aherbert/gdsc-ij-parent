@@ -573,6 +573,44 @@
         <maven.javadoc.skip>true</maven.javadoc.skip>
       </properties>
     </profile>
+
+    <!-- Run ImageJ with the current Maven classpath. Child projects can create ImageJ plugin classes with no package and 
+      containing an underscore in the name. These will be compiled into the 'target/classes' directory and will be detected by 
+      ImageJ during start-up. Note: It is possible to add a single plugin that when run uses the ImageJ API to add more commands 
+      to the default menus. -->
+    <profile>
+      <id>run-imagej</id>
+      <build>
+        <!-- Executed after the compile phase -->
+        <defaultGoal>process-classes</defaultGoal>
+        <plugins>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>imagej</id>
+                <phase>process-classes</phase>
+                <goals>
+                  <goal>exec</goal>
+                </goals>
+                <configuration>
+                  <executable>java</executable>
+                  <arguments>
+                    <argument>-classpath</argument>
+                    <classpath />
+                    <argument>-Xms2048M</argument>
+                    <!-- Used by GDSC projects to detect that the default plugin should install extra plugins in the menus. -->
+                    <argument>-Dabout-install=true</argument>
+                    <argument>ij.ImageJ</argument>
+                  </arguments>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
   </profiles>
 
 </project>
