@@ -112,7 +112,7 @@
     <!-- Plugin dependencies versions -->
     <checkstyle.version>8.18</checkstyle.version>
     <pmd.version>6.7.0</pmd.version>
-    <org.junit.jupiter.version>5.2.0</org.junit.jupiter.version>
+    <org.junit.jupiter.version>5.4.1</org.junit.jupiter.version>
     <org.junit.platform.version>1.2.0</org.junit.platform.version>
 
   </properties>
@@ -142,7 +142,7 @@
       </dependency>
       <dependency>
         <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-api</artifactId>
+        <artifactId>junit-jupiter</artifactId>
         <version>${org.junit.jupiter.version}</version>
       </dependency>
       <dependency>
