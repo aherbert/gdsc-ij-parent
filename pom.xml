@@ -98,7 +98,7 @@
 
     <!-- Maven plugin versions (of those not managed by pom-scijava-base) -->
     <maven-project-info-reports-plugin.version>3.0.0</maven-project-info-reports-plugin.version>
-    <maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
+    <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
     <maven-checkstyle-plugin.version>3.0.0</maven-checkstyle-plugin.version>
     <maven-changes-plugin.version>2.12.1</maven-changes-plugin.version>
     <maven-pmd-plugin.version>3.10.0</maven-pmd-plugin.version>
@@ -112,8 +112,7 @@
     <!-- Plugin dependencies versions -->
     <checkstyle.version>8.18</checkstyle.version>
     <pmd.version>6.7.0</pmd.version>
-    <org.junit.jupiter.version>5.4.1</org.junit.jupiter.version>
-    <org.junit.platform.version>1.2.0</org.junit.platform.version>
+    <org.junit.bom.version>5.4.2</org.junit.bom.version>
 
   </properties>
 
@@ -141,9 +140,11 @@
         <version>${gdsc.test.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter</artifactId>
-        <version>${org.junit.jupiter.version}</version>
+        <groupId>org.junit</groupId>
+        <artifactId>junit-bom</artifactId>
+        <version>${org.junit.bom.version}</version>
+        <scope>import</scope>
+        <type>pom</type>
       </dependency>
       <dependency>
         <groupId>uk.ac.sussex.gdsc</groupId>
@@ -168,6 +169,19 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.platform</groupId>
+      <artifactId>junit-platform-launcher</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 
   <repositories>
     <repository>
@@ -196,18 +210,6 @@
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>${maven-surefire-plugin.version}</version>
-          <dependencies>
-            <dependency>
-              <groupId>org.junit.platform</groupId>
-              <artifactId>junit-platform-surefire-provider</artifactId>
-              <version>${org.junit.platform.version}</version>
-            </dependency>
-            <dependency>
-              <groupId>org.junit.jupiter</groupId>
-              <artifactId>junit-jupiter-engine</artifactId>
-              <version>${org.junit.jupiter.version}</version>
-            </dependency>
-          </dependencies>
           <configuration>
             <systemPropertyVariables>
               <!-- Set JUL Formatting -->
@@ -475,21 +477,6 @@
     </profile>
     <profile>
       <id>eclipse</id>
-      <dependencyManagement>
-        <dependencies>
-          <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>${org.junit.jupiter.version}</version>
-          </dependency>
-          <dependency>
-            <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-launcher</artifactId>
-            <version>${org.junit.platform.version}</version>
-            <scope>test</scope>
-          </dependency>
-        </dependencies>
-      </dependencyManagement>
       <dependencies>
         <dependency>
           <groupId>org.junit.jupiter</groupId>
