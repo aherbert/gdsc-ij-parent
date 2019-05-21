@@ -240,6 +240,7 @@
           </dependencies>
           <configuration>
             <configLocation>${basedir}/src/main/resources/checkstyle/checkstyle.xml</configLocation>
+            <suppressionsLocation>${basedir}/src/main/resources/checkstyle/checkstyle-suppressions.xml</suppressionsLocation>
             <encoding>UTF-8</encoding>
             <consoleOutput>true</consoleOutput>
             <failsOnError>true</failsOnError>
@@ -343,6 +344,7 @@
         <artifactId>maven-checkstyle-plugin</artifactId>
         <configuration>
           <configLocation>${basedir}/src/main/resources/checkstyle/checkstyle.xml</configLocation>
+          <suppressionsLocation>${basedir}/src/main/resources/checkstyle/checkstyle-suppressions.xml</suppressionsLocation>
           <encoding>UTF-8</encoding>
           <linkXRef>true</linkXRef>
           <enableRulesSummary>false</enableRulesSummary>
