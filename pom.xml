@@ -55,7 +55,7 @@
     </repository>
     <site>
       <id>${project.artifactId}-site</id>
-      <url>file://${parent.dir}/mvn-repo</url>
+      <url>file://${gdsc.parent.dir}/mvn-repo</url>
     </site>
   </distributionManagement>
   <mailingLists>
@@ -90,6 +90,10 @@
     <build.date>${maven.build.timestamp}</build.date>
     <license.licenseName>gpl_v3</license.licenseName>
     <license.copyrightOwners>Alex Herbert</license.copyrightOwners>
+
+    <!-- Workaround to avoid duplicating config files in multi-module projects.
+         Each module pom should redefine this property. -->
+    <gdsc.parent.dir>${basedir}</gdsc.parent.dir>
 
     <!-- Dependency versions -->
     <gdsc.test.version>1.0-SNAPSHOT</gdsc.test.version>
@@ -239,8 +243,8 @@
             </dependency>
           </dependencies>
           <configuration>
-            <configLocation>${basedir}/src/main/resources/checkstyle/checkstyle.xml</configLocation>
-            <suppressionsLocation>${basedir}/src/main/resources/checkstyle/checkstyle-suppressions.xml</suppressionsLocation>
+            <configLocation>${gdsc.parent.dir}/src/main/resources/checkstyle/checkstyle.xml</configLocation>
+            <suppressionsLocation>${gdsc.parent.dir}/src/main/resources/checkstyle/checkstyle-suppressions.xml</suppressionsLocation>
             <encoding>UTF-8</encoding>
             <consoleOutput>true</consoleOutput>
             <failsOnError>true</failsOnError>
@@ -268,7 +272,7 @@
             <skipEmptyReport>false</skipEmptyReport>
             <analysisCache>true</analysisCache>
             <rulesets>
-              <ruleset>${basedir}/src/main/resources/pmd/pmd-ruleset.xml</ruleset>
+              <ruleset>${gdsc.parent.dir}/src/main/resources/pmd/pmd-ruleset.xml</ruleset>
             </rulesets>
             <failOnViolation>false</failOnViolation>
             <printFailingErrors>false</printFailingErrors>
@@ -282,7 +286,7 @@
             <failOnError>false</failOnError>
             <threshold>Normal</threshold>
             <effort>Default</effort>
-            <excludeFilterFile>${basedir}/src/main/resources/spotbugs/spotbugs-exclude-filter.xml</excludeFilterFile>
+            <excludeFilterFile>${gdsc.parent.dir}/src/main/resources/spotbugs/spotbugs-exclude-filter.xml</excludeFilterFile>
           </configuration>
         </plugin>
         <plugin>
@@ -343,8 +347,8 @@
       <plugin>
         <artifactId>maven-checkstyle-plugin</artifactId>
         <configuration>
-          <configLocation>${basedir}/src/main/resources/checkstyle/checkstyle.xml</configLocation>
-          <suppressionsLocation>${basedir}/src/main/resources/checkstyle/checkstyle-suppressions.xml</suppressionsLocation>
+          <configLocation>${gdsc.parent.dir}/src/main/resources/checkstyle/checkstyle.xml</configLocation>
+          <suppressionsLocation>${gdsc.parent.dir}/src/main/resources/checkstyle/checkstyle-suppressions.xml</suppressionsLocation>
           <encoding>UTF-8</encoding>
           <linkXRef>true</linkXRef>
           <enableRulesSummary>false</enableRulesSummary>
@@ -367,7 +371,7 @@
           <skipEmptyReport>false</skipEmptyReport>
           <analysisCache>true</analysisCache>
           <rulesets>
-            <ruleset>${basedir}/src/main/resources/pmd/pmd-ruleset.xml</ruleset>
+            <ruleset>${gdsc.parent.dir}/src/main/resources/pmd/pmd-ruleset.xml</ruleset>
           </rulesets>
         </configuration>
         <reportSets>
@@ -386,7 +390,7 @@
         <configuration>
           <threshold>Normal</threshold>
           <effort>Default</effort>
-          <excludeFilterFile>${basedir}/src/main/resources/spotbugs/spotbugs-exclude-filter.xml</excludeFilterFile>
+          <excludeFilterFile>${gdsc.parent.dir}/src/main/resources/spotbugs/spotbugs-exclude-filter.xml</excludeFilterFile>
         </configuration>
         <reportSets>
           <reportSet>
