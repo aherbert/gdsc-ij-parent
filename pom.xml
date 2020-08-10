@@ -116,7 +116,7 @@
     <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
 
     <!-- Plugin dependencies versions -->
-    <checkstyle.version>8.29</checkstyle.version>
+    <checkstyle.version>8.35</checkstyle.version>
     <pmd.version>6.26.0</pmd.version>
     <org.junit.bom.version>5.4.2</org.junit.bom.version>
 
