@@ -112,7 +112,7 @@
     <formatter-maven-plugin.version>2.12.1</formatter-maven-plugin.version>
 
     <!-- Other maven plugin versions -->
-    <spotbugs-maven-plugin.version>3.1.6</spotbugs-maven-plugin.version>
+    <spotbugs-maven-plugin.version>4.0.4</spotbugs-maven-plugin.version>
     <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
 
     <!-- Plugin dependencies versions -->
