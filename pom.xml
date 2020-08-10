@@ -234,6 +234,7 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>buildnumber-maven-plugin</artifactId>
+          <version>1.4</version>
           <configuration>
             <getRevisionOnlyOnce>false</getRevisionOnlyOnce>
           </configuration>
@@ -430,6 +431,7 @@
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>build-helper-maven-plugin</artifactId>
+            <version>3.2.0</version>
             <executions>
               <execution>
                 <!-- Fail if not a SNAPSHOT -->
@@ -472,6 +474,7 @@
         <plugins>
           <plugin>
             <artifactId>maven-gpg-plugin</artifactId>
+            <version>1.6</version>
             <executions>
               <execution>
                 <id>sign-artifacts</id>
@@ -595,6 +598,7 @@
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
+            <version>3.0.0</version>
             <executions>
               <execution>
                 <id>imagej</id>
