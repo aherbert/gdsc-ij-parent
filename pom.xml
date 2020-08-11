@@ -91,8 +91,7 @@
     <license.licenseName>gpl_v3</license.licenseName>
     <license.copyrightOwners>Alex Herbert</license.copyrightOwners>
 
-    <!-- Workaround to avoid duplicating config files in multi-module projects.
-         Each module pom should redefine this property. -->
+    <!-- Workaround to avoid duplicating config files in multi-module projects. Each module pom should redefine this property. -->
     <gdsc.parent.dir>${basedir}</gdsc.parent.dir>
 
     <!-- Dependency versions -->
@@ -102,6 +101,7 @@
 
     <!-- Maven plugin versions (of those not managed by pom-scijava-base) -->
     <formatter-maven-plugin.version>2.12.1</formatter-maven-plugin.version>
+    <build-helper-maven-plugin.version>3.2.0</build-helper-maven-plugin.version>
     <maven-changes-plugin.version>2.12.1</maven-changes-plugin.version>
     <maven-checkstyle-plugin.version>3.1.1</maven-checkstyle-plugin.version>
     <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
@@ -320,6 +320,11 @@
           <artifactId>formatter-maven-plugin</artifactId>
           <version>${formatter-maven-plugin.version}</version>
         </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>build-helper-maven-plugin</artifactId>
+          <version>${build-helper-maven-plugin.version}</version>
+        </plugin>
       </plugins>
     </pluginManagement>
     <plugins>
@@ -436,7 +441,6 @@
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>build-helper-maven-plugin</artifactId>
-            <version>3.2.0</version>
             <executions>
               <execution>
                 <!-- Fail if not a SNAPSHOT -->
