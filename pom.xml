@@ -104,6 +104,7 @@
     <formatter-maven-plugin.version>2.12.1</formatter-maven-plugin.version>
     <maven-changes-plugin.version>2.12.1</maven-changes-plugin.version>
     <maven-checkstyle-plugin.version>3.1.1</maven-checkstyle-plugin.version>
+    <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
     <maven-jxr-plugin.version>3.0.0</maven-jxr-plugin.version>
     <maven-pmd-plugin.version>3.13.0</maven-pmd-plugin.version>
     <maven-project-info-reports-plugin.version>3.1.0</maven-project-info-reports-plugin.version>
@@ -216,6 +217,10 @@
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>${maven-project-info-reports-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>${maven-jar-plugin.version}</version>
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
