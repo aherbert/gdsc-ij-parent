@@ -95,7 +95,7 @@
     <gdsc.parent.dir>${basedir}</gdsc.parent.dir>
 
     <!-- Dependency versions -->
-    <commons.rng.version>1.3</commons.rng.version>
+    <commons.rng.version>1.4</commons.rng.version>
     <gdsc.analytics.version>2.0-SNAPSHOT</gdsc.analytics.version>
     <gdsc.test.version>1.0-SNAPSHOT</gdsc.test.version>
 
