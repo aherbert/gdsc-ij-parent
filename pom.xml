@@ -118,7 +118,6 @@
 
     <!-- Plugin dependencies versions -->
     <checkstyle.version>8.35</checkstyle.version>
-    <org.junit.bom.version>5.6.2</org.junit.bom.version>
     <pmd.version>6.26.0</pmd.version>
 
   </properties>
@@ -149,7 +148,8 @@
       <dependency>
         <groupId>org.junit</groupId>
         <artifactId>junit-bom</artifactId>
-        <version>${org.junit.bom.version}</version>
+        <!-- Use version from scijava pom -->
+        <version>${junit-jupiter.version}</version>
         <scope>import</scope>
         <type>pom</type>
       </dependency>
