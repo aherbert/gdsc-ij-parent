@@ -14,13 +14,13 @@
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>GDSC ImageJ</name>
+  <name>GDSC ImageJ POM</name>
   <url>http:///github.com/aherbert/gdsc-ij-parent</url>
   <organization>
     <name>Genome Damage and Stability Centre</name>
     <url>http://www.sussex.ac.uk/gdsc/</url>
   </organization>
-  <description>Genome Damage and Stability Centre ImageJ Plugins</description>
+  <description>A base POM for the GDSC ImageJ projects.</description>
 
   <licenses>
     <license>
