@@ -91,6 +91,9 @@
     <license.licenseName>gpl_v3</license.licenseName>
     <license.copyrightOwners>Alex Herbert</license.copyrightOwners>
 
+    <!-- Default to SciJava's guess -->
+    <gdsc.automatic.module.name>${guesspackage}</gdsc.automatic.module.name>
+
     <!-- Workaround to avoid duplicating config files in multi-module projects. Each module pom should redefine this property. -->
     <gdsc.parent.dir>${basedir}</gdsc.parent.dir>
 
@@ -337,6 +340,17 @@
           <releaseProfiles>release</releaseProfiles>
           <goals>deploy</goals>
           <!-- <goals>deploy nexus-staging:release</goals> -->
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifestEntries>
+              <!-- Java 9 -->
+              <Automatic-Module-Name>${gdsc.automatic.module.name}</Automatic-Module-Name>
+            </manifestEntries>
+          </archive>
         </configuration>
       </plugin>
     </plugins>
