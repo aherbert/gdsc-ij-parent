@@ -99,7 +99,7 @@
 
     <!-- Dependency versions -->
     <commons.rng.version>1.4</commons.rng.version>
-    <gdsc.analytics.version>2.0</gdsc.analytics.version>
+    <gdsc.analytics.version>3.0</gdsc.analytics.version>
     <gdsc.test.version>1.0-SNAPSHOT</gdsc.test.version>
 
     <!-- Maven plugin versions (of those not managed by pom-scijava-base) -->
