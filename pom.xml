@@ -98,9 +98,10 @@
     <gdsc.parent.dir>${basedir}</gdsc.parent.dir>
 
     <!-- Dependency versions -->
-    <commons.rng.version>1.4</commons.rng.version>
     <gdsc.analytics.version>3.0</gdsc.analytics.version>
     <gdsc.test.version>1.0-SNAPSHOT</gdsc.test.version>
+    <commons.rng.version>1.4</commons.rng.version>
+    <com.koloboke.version>1.0.0</com.koloboke.version>
 
     <!-- Maven plugin versions (of those not managed by pom-scijava-base) -->
     <formatter-maven-plugin.version>2.12.1</formatter-maven-plugin.version>
@@ -122,6 +123,8 @@
     <!-- Plugin dependencies versions -->
     <checkstyle.version>8.35</checkstyle.version>
     <pmd.version>6.26.0</pmd.version>
+
+    <allowedDuplicateClasses>${scijava.allowedDuplicateClasses},com.koloboke.collect.impl.package-info,com.koloboke.collect.impl.hash.package-info</allowedDuplicateClasses>
 
   </properties>
 
@@ -177,6 +180,11 @@
         <artifactId>commons-rng-sampling</artifactId>
         <version>${commons.rng.version}</version>
       </dependency>
+        <dependency>
+          <groupId>com.koloboke</groupId>
+          <artifactId>koloboke-impl-jdk8</artifactId>
+          <version>${com.koloboke.version}</version>
+        </dependency>
     </dependencies>
   </dependencyManagement>
 
