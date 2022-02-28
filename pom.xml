@@ -102,6 +102,7 @@
     <gdsc.test.version>1.0-SNAPSHOT</gdsc.test.version>
     <commons.rng.version>1.4</commons.rng.version>
     <com.koloboke.version>1.0.0</com.koloboke.version>
+    <it.unimi.dsi.fastutil.version>8.5.6</it.unimi.dsi.fastutil.version>
 
     <!-- Maven plugin versions (of those not managed by pom-scijava-base) -->
     <formatter-maven-plugin.version>2.12.1</formatter-maven-plugin.version>
@@ -180,11 +181,16 @@
         <artifactId>commons-rng-sampling</artifactId>
         <version>${commons.rng.version}</version>
       </dependency>
-        <dependency>
-          <groupId>com.koloboke</groupId>
-          <artifactId>koloboke-impl-jdk8</artifactId>
-          <version>${com.koloboke.version}</version>
-        </dependency>
+      <dependency>
+        <groupId>com.koloboke</groupId>
+        <artifactId>koloboke-impl-jdk8</artifactId>
+        <version>${com.koloboke.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>it.unimi.dsi</groupId>
+        <artifactId>fastutil-core</artifactId>
+        <version>${it.unimi.dsi.fastutil.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
