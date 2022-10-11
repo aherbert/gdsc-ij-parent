@@ -100,7 +100,7 @@
     <!-- Dependency versions -->
     <gdsc.analytics.version>3.0</gdsc.analytics.version>
     <gdsc.test.version>1.0.2</gdsc.test.version>
-    <commons.rng.version>1.4</commons.rng.version>
+    <commons.rng.version>1.5</commons.rng.version>
     <com.koloboke.version>1.0.0</com.koloboke.version>
     <it.unimi.dsi.fastutil.version>8.5.8</it.unimi.dsi.fastutil.version>
 
@@ -168,23 +168,10 @@
 
       <dependency>
         <groupId>org.apache.commons</groupId>
-        <artifactId>commons-rng-client-api</artifactId>
+        <artifactId>commons-rng-bom</artifactId>
         <version>${commons.rng.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.commons</groupId>
-        <artifactId>commons-rng-core</artifactId>
-        <version>${commons.rng.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.commons</groupId>
-        <artifactId>commons-rng-simple</artifactId>
-        <version>${commons.rng.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.commons</groupId>
-        <artifactId>commons-rng-sampling</artifactId>
-        <version>${commons.rng.version}</version>
+        <scope>import</scope>
+        <type>pom</type>
       </dependency>
       <dependency>
         <groupId>com.koloboke</groupId>
