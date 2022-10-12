@@ -120,10 +120,12 @@
     <!-- Other maven plugin versions -->
     <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
     <spotbugs-maven-plugin.version>4.6.0.0</spotbugs-maven-plugin.version>
+    <revapi-maven-plugin.version>0.14.7</revapi-maven-plugin.version>
 
     <!-- Plugin dependencies versions -->
     <checkstyle.version>8.35</checkstyle.version>
     <pmd.version>6.42.0</pmd.version>
+    <revapi-java.version>0.27.0</revapi-java.version>
 
     <allowedDuplicateClasses>${scijava.allowedDuplicateClasses},com.koloboke.collect.impl.package-info,com.koloboke.collect.impl.hash.package-info</allowedDuplicateClasses>
 
@@ -334,10 +336,34 @@
           <artifactId>build-helper-maven-plugin</artifactId>
           <version>${build-helper-maven-plugin.version}</version>
         </plugin>
+        <plugin>
+          <groupId>org.revapi</groupId>
+          <artifactId>revapi-maven-plugin</artifactId>
+          <version>${revapi-maven-plugin.version}</version>
+          <dependencies>
+            <dependency>
+              <groupId>org.revapi</groupId>
+              <artifactId>revapi-java</artifactId>
+              <version>${revapi-java.version}</version>
+            </dependency>
+          </dependencies>
+          <configuration>
+            <analysisConfiguration>
+              <revapi.differences id="intentional-api-changes">
+                <ignore>true</ignore>
+              </revapi.differences>
+            </analysisConfiguration>
+            <!-- <analysisConfigurationFiles> to be configured in the child project -->
+            <!-- Note: Property 'reportSeverity' is deprecated but newer 'reportCriticality'
+                 does work as documented. -->
+            <reportSeverity>equivalent</reportSeverity>
+            <reportCriticality>allowed</reportCriticality>
+          </configuration>
+        </plugin>
       </plugins>
     </pluginManagement>
     <plugins>
-      <!-- use of mvn release:prepeare release perform should use the nexus release profile -->
+      <!-- use of mvn release:prepare release:perform should use the nexus release profile -->
       <plugin>
         <artifactId>maven-release-plugin</artifactId>
         <configuration>
@@ -449,6 +475,26 @@
       <plugin>
         <artifactId>maven-jxr-plugin</artifactId>
         <version>${maven-jxr-plugin.version}</version>
+      </plugin>
+      <plugin>
+        <groupId>org.revapi</groupId>
+        <artifactId>revapi-maven-plugin</artifactId>
+        <version>${revapi-maven-plugin.version}</version>
+        <configuration>
+          <!-- For reporting do not ignore the "intentional-api-changes" so they are included -->
+          <!-- <analysisConfigurationFiles> to be configured in the child project -->
+          <!-- Note: Property 'reportSeverity' is deprecated but newer 'reportCriticality'
+               does work as documented. -->
+          <reportSeverity>equivalent</reportSeverity>
+          <reportCriticality>allowed</reportCriticality>
+        </configuration>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>report</report>
+            </reports>
+          </reportSet>
+        </reportSets>
       </plugin>
     </plugins>
   </reporting>
