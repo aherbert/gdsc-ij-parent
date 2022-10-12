@@ -18,7 +18,7 @@ deploy:
   provider: script
   script:
   - if mvn help:evaluate -Dexpression=project.version -q -DforceStdout | grep SNAPSHOT; then
-      mvn deploy -P snapshot-release --settings deploy/settings.xml;
+      mvn --no-transfer-progress -P snapshot-release --settings deploy/settings.xml deploy;
     fi
   skip_cleanup: true
   on:
