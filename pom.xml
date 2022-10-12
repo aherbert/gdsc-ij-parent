@@ -121,6 +121,8 @@
     <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
     <spotbugs-maven-plugin.version>4.6.0.0</spotbugs-maven-plugin.version>
     <revapi-maven-plugin.version>0.14.7</revapi-maven-plugin.version>
+    <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
+    <exec-maven-plugin.version>3.0.0</exec-maven-plugin.version>
 
     <!-- Plugin dependencies versions -->
     <checkstyle.version>8.35</checkstyle.version>
@@ -549,7 +551,7 @@
         <plugins>
           <plugin>
             <artifactId>maven-gpg-plugin</artifactId>
-            <version>1.6</version>
+            <version>${maven-gpg-plugin.version}</version>
             <executions>
               <execution>
                 <id>sign-artifacts</id>
@@ -673,7 +675,7 @@
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
-            <version>3.0.0</version>
+            <version>${exec-maven-plugin.version}</version>
             <executions>
               <execution>
                 <id>imagej</id>
