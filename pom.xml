@@ -103,7 +103,7 @@
     <gdsc.test.version>1.0.2</gdsc.test.version>
     <commons.rng.version>1.5</commons.rng.version>
     <com.koloboke.version>1.0.0</com.koloboke.version>
-    <it.unimi.dsi.fastutil.version>8.5.8</it.unimi.dsi.fastutil.version>
+    <it.unimi.dsi.fastutil.version>8.5.9</it.unimi.dsi.fastutil.version>
 
     <!-- Maven plugin versions (of those not managed by pom-scijava-base) -->
     <!-- mvn versions:display-plugin-updates -U -->
@@ -128,8 +128,8 @@
     <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
 
     <!-- Plugin dependencies versions -->
-    <checkstyle.version>8.35</checkstyle.version>
-    <pmd.version>6.42.0</pmd.version>
+    <checkstyle.version>9.3</checkstyle.version>
+    <pmd.version>6.50.0</pmd.version>
     <revapi-java.version>0.27.0</revapi-java.version>
 
     <allowedDuplicateClasses>${scijava.allowedDuplicateClasses},com.koloboke.collect.impl.package-info,com.koloboke.collect.impl.hash.package-info</allowedDuplicateClasses>
