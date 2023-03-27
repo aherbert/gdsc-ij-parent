@@ -122,7 +122,7 @@
     <formatter-maven-plugin.version>2.20.0</formatter-maven-plugin.version>
     <build-helper-maven-plugin.version>3.3.0</build-helper-maven-plugin.version>
     <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
-    <revapi-maven-plugin.version>0.14.7</revapi-maven-plugin.version>
+    <revapi-maven-plugin.version>0.15.0</revapi-maven-plugin.version>
     <buildnumber-maven-plugin.version>3.0.0</buildnumber-maven-plugin.version>
     <exec-maven-plugin.version>3.1.0</exec-maven-plugin.version>
     <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
@@ -130,7 +130,7 @@
     <!-- Plugin dependencies versions -->
     <checkstyle.version>9.3</checkstyle.version>
     <pmd.version>6.50.0</pmd.version>
-    <revapi-java.version>0.27.0</revapi-java.version>
+    <revapi-java.version>0.28.1</revapi-java.version>
 
     <allowedDuplicateClasses>${scijava.allowedDuplicateClasses},com.koloboke.collect.impl.package-info,com.koloboke.collect.impl.hash.package-info</allowedDuplicateClasses>
 
