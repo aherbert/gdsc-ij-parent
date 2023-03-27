@@ -41,8 +41,8 @@
     <url>https://github.com/aherbert/gdsc-ij-parent/issues</url>
   </issueManagement>
   <ciManagement>
-    <system>Travis CI</system>
-    <url>https://travis-ci.com/aherbert/gdsc-ij-parent</url>
+    <system>GitHub Actions</system>
+    <url>https://github.com/aherbert/gdsc-ij-parent/actions</url>
   </ciManagement>
   <distributionManagement>
     <snapshotRepository>
