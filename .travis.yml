@@ -1,6 +1,11 @@
 # Workaround for transient network access preventing download of dependencies
 sudo: true
 
+# Use Partner Queue Solution for OSS
+os: linux
+arch:
+  - ppc64le
+
 language: java
 jdk: openjdk8
 branches:
