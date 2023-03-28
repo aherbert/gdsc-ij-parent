@@ -273,7 +273,6 @@
           <configuration>
             <configLocation>${gdsc.parent.dir}/src/conf/checkstyle/checkstyle.xml</configLocation>
             <suppressionsLocation>${gdsc.parent.dir}/src/conf/checkstyle/checkstyle-suppressions.xml</suppressionsLocation>
-            <encoding>UTF-8</encoding>
             <consoleOutput>true</consoleOutput>
             <failsOnError>true</failsOnError>
             <linkXRef>true</linkXRef>
@@ -427,7 +426,6 @@
         <configuration>
           <configLocation>${gdsc.parent.dir}/src/conf/checkstyle/checkstyle.xml</configLocation>
           <suppressionsLocation>${gdsc.parent.dir}/src/conf/checkstyle/checkstyle-suppressions.xml</suppressionsLocation>
-          <encoding>UTF-8</encoding>
           <linkXRef>true</linkXRef>
           <enableRulesSummary>false</enableRulesSummary>
           <includeResources>false</includeResources>
