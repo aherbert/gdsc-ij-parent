@@ -109,28 +109,28 @@
     <!-- Maven plugin versions (of those not managed by pom-scijava-base) -->
     <!-- mvn versions:display-plugin-updates -U -->
     <maven-changes-plugin.version>2.12.1</maven-changes-plugin.version>
-    <maven-checkstyle-plugin.version>3.2.0</maven-checkstyle-plugin.version>
-    <maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version>
+    <maven-checkstyle-plugin.version>3.3.0</maven-checkstyle-plugin.version>
+    <maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
     <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
     <maven-jxr-plugin.version>3.3.0</maven-jxr-plugin.version>
-    <maven-pmd-plugin.version>3.19.0</maven-pmd-plugin.version>
-    <maven-project-info-reports-plugin.version>3.4.1</maven-project-info-reports-plugin.version>
-    <maven-shade-plugin.version>3.4.0</maven-shade-plugin.version>
-    <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
+    <maven-pmd-plugin.version>3.21.0</maven-pmd-plugin.version>
+    <maven-project-info-reports-plugin.version>3.4.5</maven-project-info-reports-plugin.version>
+    <maven-shade-plugin.version>3.5.0</maven-shade-plugin.version>
+    <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
 
     <!-- Other maven plugin versions -->
-    <spotbugs-maven-plugin.version>4.7.2.1</spotbugs-maven-plugin.version>
-    <formatter-maven-plugin.version>2.20.0</formatter-maven-plugin.version>
-    <build-helper-maven-plugin.version>3.3.0</build-helper-maven-plugin.version>
+    <spotbugs-maven-plugin.version>4.7.3.5</spotbugs-maven-plugin.version>
+    <formatter-maven-plugin.version>2.23.0</formatter-maven-plugin.version>
+    <build-helper-maven-plugin.version>3.4.0</build-helper-maven-plugin.version>
     <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
     <revapi-maven-plugin.version>0.15.0</revapi-maven-plugin.version>
-    <buildnumber-maven-plugin.version>3.0.0</buildnumber-maven-plugin.version>
+    <buildnumber-maven-plugin.version>3.2.0</buildnumber-maven-plugin.version>
     <exec-maven-plugin.version>3.1.0</exec-maven-plugin.version>
     <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
 
     <!-- Plugin dependencies versions -->
     <checkstyle.version>9.3</checkstyle.version>
-    <pmd.version>6.50.0</pmd.version>
+    <pmd.version>6.55.0</pmd.version>
     <revapi-java.version>0.28.1</revapi-java.version>
 
     <allowedDuplicateClasses>${scijava.allowedDuplicateClasses},com.koloboke.collect.impl.package-info,com.koloboke.collect.impl.hash.package-info</allowedDuplicateClasses>
