@@ -659,6 +659,7 @@
       <properties>
         <skipTests>true</skipTests>
         <maven.javadoc.skip>true</maven.javadoc.skip>
+        <revapi.skip>true</revapi.skip>
       </properties>
     </profile>
 
