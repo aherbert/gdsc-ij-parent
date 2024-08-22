@@ -101,8 +101,8 @@
     <!-- mvn versions:display-dependency-updates -U -->
     <gdsc.analytics.version>3.0</gdsc.analytics.version>
     <gdsc.test.version>1.0.2</gdsc.test.version>
-    <commons.rng.version>1.5</commons.rng.version>
-    <commons.statistics.version>1.0</commons.statistics.version>
+    <commons.rng.version>1.6</commons.rng.version>
+    <commons.statistics.version>1.1</commons.statistics.version>
     <com.koloboke.version>1.0.0</com.koloboke.version>
     <it.unimi.dsi.fastutil.version>8.5.11</it.unimi.dsi.fastutil.version>
 
@@ -183,8 +183,10 @@
       </dependency>
       <dependency>
         <groupId>org.apache.commons</groupId>
-        <artifactId>commons-statistics-distribution</artifactId>
+        <artifactId>commons-statistics-bom</artifactId>
         <version>${commons.statistics.version}</version>
+        <scope>import</scope>
+        <type>pom</type>
       </dependency>
       <dependency>
         <groupId>com.koloboke</groupId>
