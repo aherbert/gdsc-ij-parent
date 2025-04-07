@@ -99,7 +99,6 @@
 
     <!-- Dependency versions -->
     <!-- mvn versions:display-dependency-updates -U -->
-    <gdsc.analytics.version>3.0</gdsc.analytics.version>
     <gdsc.test.version>1.0.2</gdsc.test.version>
     <commons.rng.version>1.6</commons.rng.version>
     <commons.statistics.version>1.1</commons.statistics.version>
@@ -167,11 +166,6 @@
         <version>${junit-jupiter.version}</version>
         <scope>import</scope>
         <type>pom</type>
-      </dependency>
-      <dependency>
-        <groupId>uk.ac.sussex.gdsc</groupId>
-        <artifactId>gdsc-analytics</artifactId>
-        <version>${gdsc.analytics.version}</version>
       </dependency>
 
       <dependency>
