@@ -122,7 +122,7 @@
     <formatter-maven-plugin.version>2.26.0</formatter-maven-plugin.version>
     <build-helper-maven-plugin.version>3.4.0</build-helper-maven-plugin.version>
     <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
-    <revapi-maven-plugin.version>0.15.0</revapi-maven-plugin.version>
+    <revapi-maven-plugin.version>0.15.1</revapi-maven-plugin.version>
     <buildnumber-maven-plugin.version>3.2.1</buildnumber-maven-plugin.version>
     <exec-maven-plugin.version>3.5.0</exec-maven-plugin.version>
     <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
