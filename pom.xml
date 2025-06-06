@@ -129,7 +129,7 @@
 
     <!-- Plugin dependencies versions -->
     <checkstyle.version>9.3</checkstyle.version>
-    <pmd.version>7.13.0</pmd.version>
+    <pmd.version>7.14.0</pmd.version>
     <revapi-java.version>0.28.4</revapi-java.version>
 
     <allowedDuplicateClasses>${scijava.allowedDuplicateClasses},com.koloboke.collect.impl.package-info,com.koloboke.collect.impl.hash.package-info</allowedDuplicateClasses>
