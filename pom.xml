@@ -120,7 +120,7 @@
     <!-- Other maven plugin versions -->
     <spotbugs-maven-plugin.version>4.9.3.0</spotbugs-maven-plugin.version>
     <formatter-maven-plugin.version>2.26.0</formatter-maven-plugin.version>
-    <build-helper-maven-plugin.version>3.6.0</build-helper-maven-plugin.version>
+    <build-helper-maven-plugin.version>3.6.1</build-helper-maven-plugin.version>
     <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
     <revapi-maven-plugin.version>0.15.1</revapi-maven-plugin.version>
     <buildnumber-maven-plugin.version>3.2.1</buildnumber-maven-plugin.version>
