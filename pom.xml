@@ -45,14 +45,6 @@
     <url>https://github.com/aherbert/gdsc-ij-parent/actions</url>
   </ciManagement>
   <distributionManagement>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-    <repository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
     <site>
       <id>${project.artifactId}-site</id>
       <url>file://${gdsc.parent.dir}/mvn-repo</url>
@@ -125,7 +117,7 @@
     <revapi-maven-plugin.version>0.15.1</revapi-maven-plugin.version>
     <buildnumber-maven-plugin.version>3.2.1</buildnumber-maven-plugin.version>
     <exec-maven-plugin.version>3.5.1</exec-maven-plugin.version>
-    <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
+    <central-publishing-maven-plugin.version>0.8.0</central-publishing-maven-plugin.version>
 
     <!-- Plugin dependencies versions -->
     <checkstyle.version>9.3</checkstyle.version>
@@ -214,8 +206,9 @@
       <url>http://maven.imagej.net/content/repositories/releases</url>
     </repository>
     <repository>
-      <id>snapshots-repo</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <name>Central Portal Snapshots</name>
+      <id>central-portal-snapshots</id>
+      <url>https://central.sonatype.com/repository/maven-snapshots/</url>
       <releases>
         <enabled>false</enabled>
       </releases>
@@ -328,9 +321,9 @@
           <version>${maven-shade-plugin.version}</version>
         </plugin>
         <plugin>
-          <groupId>org.sonatype.plugins</groupId>
-          <artifactId>nexus-staging-maven-plugin</artifactId>
-          <version>${nexus-staging-maven-plugin.version}</version>
+          <groupId>org.sonatype.central</groupId>
+          <artifactId>central-publishing-maven-plugin</artifactId>
+          <version>${central-publishing-maven-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>net.revelc.code.formatter</groupId>
@@ -523,15 +516,14 @@
             </executions>
           </plugin>
           <plugin>
-            <groupId>org.sonatype.plugins</groupId>
-            <artifactId>nexus-staging-maven-plugin</artifactId>
+            <groupId>org.sonatype.central</groupId>
+            <artifactId>central-publishing-maven-plugin</artifactId>
             <extensions>true</extensions>
             <configuration>
-              <serverId>ossrh</serverId>
-              <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-              <autoReleaseAfterClose>true</autoReleaseAfterClose>
-              <!-- Not required for snapshot -->
-              <skipStaging>true</skipStaging>
+              <publishingServerId>central</publishingServerId>
+              <!-- It is not clear if this applies to snapshots that do not
+                use trigger the validation stage after upload. -->
+              <autoPublish>true</autoPublish>
             </configuration>
           </plugin>
         </plugins>
@@ -559,14 +551,12 @@
             </executions>
           </plugin>
           <plugin>
-            <groupId>org.sonatype.plugins</groupId>
-            <artifactId>nexus-staging-maven-plugin</artifactId>
+            <groupId>org.sonatype.central</groupId>
+            <artifactId>central-publishing-maven-plugin</artifactId>
             <extensions>true</extensions>
             <configuration>
-              <serverId>ossrh</serverId>
-              <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-              <!-- The staged repo must be inspected and then released -->
-              <autoReleaseAfterClose>false</autoReleaseAfterClose>
+              <publishingServerId>central</publishingServerId>
+              <autoPublish>false</autoPublish>
             </configuration>
           </plugin>
         </plugins>

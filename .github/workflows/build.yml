@@ -29,15 +29,9 @@ jobs:
     - name: Get version
       run: echo "PROJECT_VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
     - name: Build
-      env:
-        SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
-        SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
       run: mvn -V -B --no-transfer-progress install
     - name: Deploy SNAPSHOT
       # must run directly after 'Build'
       if: matrix.java == 8 && github.repository == 'aherbert/gdsc-ij-parent' && github.ref_name == 'master' && contains(env.PROJECT_VERSION, 'SNAPSHOT')
-      env:
-        SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
-        SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
       run: >
         mvn -V -B --no-transfer-progress -Psnapshot-release deploy -Dgpg.skip
