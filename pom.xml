@@ -118,7 +118,7 @@
     <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
 
     <!-- Other maven plugin versions -->
-    <spotbugs-maven-plugin.version>4.9.3.2</spotbugs-maven-plugin.version>
+    <spotbugs-maven-plugin.version>4.7.3.5</spotbugs-maven-plugin.version>
     <formatter-maven-plugin.version>2.27.0</formatter-maven-plugin.version>
     <build-helper-maven-plugin.version>3.6.1</build-helper-maven-plugin.version>
     <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
