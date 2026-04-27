@@ -27,12 +27,7 @@ jobs:
         server-username: SONATYPE_USERNAME
         server-password: SONATYPE_PASSWORD
     - name: Get version
-      run: >
-        echo "PROJECT_VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
-        echo ${{ matrix.java }}
-        echo ${{ github.repository }}
-        echo ${{ github.ref_name }}
-        echo ${{ env.PROJECT_VERSION }}
+      run: echo "PROJECT_VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
     - name: Build
       run: mvn -V -B --no-transfer-progress install
     - name: Deploy SNAPSHOT
