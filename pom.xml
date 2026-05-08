@@ -201,12 +201,6 @@
   </dependencies>
 
   <repositories>
-    <!--
-    <repository>
-      <id>imagej.releases</id>
-      <url>http://maven.imagej.net/content/repositories/releases</url>
-    </repository>
-    -->
     <repository>
       <name>Central Portal Snapshots</name>
       <id>central-portal-snapshots</id>
@@ -220,9 +214,6 @@
     </repository>
     <repository>
       <id>scijava.public</id>
-    <!--
-      <url>https://maven.scijava.org/content/groups/public</url>
-    -->
       <url>https://maven.scijava.org/repository/releases/</url>
     </repository>
   </repositories>
