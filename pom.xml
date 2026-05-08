@@ -76,8 +76,7 @@
   </contributors>
 
   <properties>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <scijava.jvm.version>1.8</scijava.jvm.version>
     <maven.build.timestamp.format>yyyy/MM/dd HH:mm</maven.build.timestamp.format>
     <build.date>${maven.build.timestamp}</build.date>
     <license.licenseName>gpl_v3</license.licenseName>
