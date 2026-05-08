@@ -211,9 +211,14 @@
         <enabled>true</enabled>
       </snapshots>
     </repository>
+    <!-- added to prioritise central before scijava repo -->
     <repository>
-      <id>scijava.public</id>
-      <url>https://maven.scijava.org/repository/releases/</url>
+      <id>central</id>
+      <url>https://repo.maven.apache.org/maven2/</url>
+    </repository>
+    <repository>
+      <id>scijava.releases</id>
+      <url>https://maven.scijava.org/content/repositories/releases/</url>
     </repository>
   </repositories>
 
