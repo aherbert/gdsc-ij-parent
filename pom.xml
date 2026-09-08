@@ -78,9 +78,7 @@
   <properties>
     <!-- pom-scijava now specifies Java 11. GDSC projects use Java 8 unless scijava
       managed dependencies are built using Java 11. -->
-    <scijava.jvm.version>1.8</scijava.jvm.version>
-    <!-- Configure the <release> tag of the javadoc plugin. -->
-    <javadoc.release.version>8</javadoc.release.version>
+    <scijava.jvm.version>8</scijava.jvm.version>
 
     <maven.build.timestamp.format>yyyy/MM/dd HH:mm</maven.build.timestamp.format>
     <build.date>${maven.build.timestamp}</build.date>
@@ -383,12 +381,6 @@
               <Automatic-Module-Name>${gdsc.automatic.module.name}</Automatic-Module-Name>
             </manifestEntries>
           </archive>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <configuration>
-          <release>${javadoc.release.version}</release>
         </configuration>
       </plugin>
     </plugins>
