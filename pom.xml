@@ -122,7 +122,7 @@
     <central-publishing-maven-plugin.version>0.11.0</central-publishing-maven-plugin.version>
 
     <!-- Plugin dependencies versions -->
-    <checkstyle.version>9.3</checkstyle.version>
+    <checkstyle.version>14.3.0</checkstyle.version>
     <pmd.version>7.27.0</pmd.version>
     <revapi-java.version>0.28.4</revapi-java.version>
 
