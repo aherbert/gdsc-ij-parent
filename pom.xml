@@ -525,7 +525,7 @@
             <configuration>
               <publishingServerId>central</publishingServerId>
               <!-- It is not clear if this applies to snapshots that do not
-                use trigger the validation stage after upload. -->
+                   trigger the validation stage after upload. -->
               <autoPublish>true</autoPublish>
             </configuration>
           </plugin>
@@ -540,6 +540,23 @@
       </properties>
       <build>
         <plugins>
+          <!-- Release to central requires javadoc -->
+          <plugin>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>create-javadoc-jar</id>
+                <goals>
+                  <goal>javadoc</goal>
+                  <goal>jar</goal>
+                </goals>
+                <phase>package</phase>
+              </execution>
+            </executions>
+            <configuration>
+              <source>${maven.compiler.source}</source>
+            </configuration>
+          </plugin>
           <plugin>
             <artifactId>maven-gpg-plugin</artifactId>
             <version>${maven-gpg-plugin.version}</version>
