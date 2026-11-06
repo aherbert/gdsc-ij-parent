@@ -97,7 +97,7 @@
     <commons.rng.version>1.7</commons.rng.version>
     <commons.statistics.version>1.3</commons.statistics.version>
     <com.koloboke.version>1.0.0</com.koloboke.version>
-    <it.unimi.dsi.fastutil.version>8.5.18</it.unimi.dsi.fastutil.version>
+    <it.unimi.dsi.fastutil.version>8.5.19</it.unimi.dsi.fastutil.version>
 
     <!-- Maven plugin versions (of those not managed by pom-scijava-base) -->
     <!-- mvn versions:display-plugin-updates -U -->
